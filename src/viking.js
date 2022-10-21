@@ -19,11 +19,7 @@ class Viking extends Soldier {
     super(health, strength);
     this.name = name;
   }
-  // attack() {
-  //   return super.attack();;
-  // }
   receiveDamage(damage) {
-    // super.receiveDamage()
     this.health = this.health - damage
     if (this.health > 0) {
       return `${this.name} has received ${damage} points of damage`;
@@ -38,12 +34,8 @@ class Viking extends Soldier {
 
 // Saxon
 class Saxon extends Soldier {
-  // attack() {
-  //   return super.attack();
-  // }
   receiveDamage(damage) {
-    // super.receiveDamage()
-    // this.health > 0;
+
     this.health = this.health - damage
     if (this.health > 0) {
       return `A Saxon has received ${damage} points of damage`;
@@ -75,7 +67,6 @@ class War {
     let saxonDamage = saxonSoldier.receiveDamage(attackPower);
     if (saxonSoldier.health <= 0) {
       this.saxonArmy.splice(this.saxonArmy.indexOf(saxonSoldier), 1 )
-      // this.saxonArmy.pop(saxonSoldier)
     }
     return saxonDamage;
   }
@@ -103,6 +94,8 @@ class War {
     }
   }
 }
+
+
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
